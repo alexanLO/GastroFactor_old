@@ -84,7 +84,7 @@ body {
   background: $surface-container-lowest;
   color: $on-surface;
   padding: 20px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(6px);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -133,181 +133,180 @@ body {
 }
 
 // // Hero Section
-// .hero-section {
-//   display: flex;
-//   justify-content: flex-center;
-//   position: relative;
-//   align-items: center;
-//   //min-height: 100vh;
-//   padding-left: 10%;
-//   height: 600px;
-//   background: $neutral;
-//   color: $on-neutral;
+.hero-section {
+  display: flex;
+  justify-content: flex-center;
+  position: relative;
+  align-items: center;
+  padding-left: 10%;
+  height: 600px;
+  color: $on-surface;
 
-//   .hero-background {
-//     position: absolute;
-//     inset: 0;
+  .hero-background {
+    position: absolute;
+    inset: 0;
 
-//     .hero-image {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: cover;
-//       filter: brightness(50%);
-//     }
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
 
-//     .hero-overlay {
-//       position: absolute;
-//       inset: 0;
-//       background: linear-gradient(to top, $neutral, transparent);
-//     }
-//   }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, $surface 0%, transparent 25%
+      );
+    }
+  }
 
-//   .hero-content {
-//     position: relative;
-//     z-index: 1;
-//     text-align: left;
-//     max-width: 600px;
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    max-width: 600px;
 
-//     .hero-label {
-//       font-family: $font-label;
-//       text-transform: uppercase;
-//       letter-spacing: 0.3em;
-//       font-size: 14px;
-//       color: $primary;
-//       display: block;
-//       margin-bottom: 10px;
-//     }
+    .hero-label {
+      font-family: $font-label;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 14px;
+      color: $primary;
+      display: block;
+      margin-bottom: 10px;
+    }
 
-//     .hero-title {
-//       font-family: $font-headline;
-//       font-size: 48px;
-//       font-style: italic;
-//       margin-bottom: 20px;
-//     }
+    .hero-title {
+      font-family: $font-headline;
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
 
-//     .hero-subtitle {
-//       font-family: $font-body;
-//       font-size: 18px;
-//       color: $on-neutral-variant;
-//     }
-//   }
-// }
+    .hero-subtitle {
+      font-family: $font-body;
+      font-size: 18px;
+      color: $on-surface-variant;
+    }
+  }
+}
 
-// // Calculation Section
-// .calculation-section {
-//   padding: 40px 20px;
-//   background-color: $neutral;
-//   color: $on-neutral;
+// Calculation Section
+.calculation-section {
+  padding: 40px 20px;
+  background: $surface;
+  color: $on-surface;
 
-//   .calculation-container {
-//     max-width: 900px;
-//     margin: 0 auto;
+  .calculation-container {
+    max-width: 900px;
+    margin: 0 auto;
 
-//     .calculation-panel {
-//       background: rgba($color: rgb(59, 51, 49), $alpha: 0.5);
-//       backdrop-filter: blur(12px);
-//       border: 1px solid $on-neutral-variant;
-//       border-radius: 12px;
-//       padding: 40px;
-//       box-shadow: 0 8px 20px rgba($color: rgb(0, 0, 0), $alpha: 0.4);
+    .calculation-panel {
+      background: rgba($color: rgb(59, 51, 49), $alpha: 0.5);
+      backdrop-filter: blur(6px);
+      border: 1px solid $on-surface-variant;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba($color: rgb(0, 0, 0), $alpha: 0.4);
 
-//       .calculation-header {
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         margin-bottom: 30px;
+      .calculation-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
 
-//         .calculation-title {
-//           font-family: $font-headline;
-//           font-size: 28px;
-//           font-style: italic;
-//           color: $on-neutral;
-//         }
+        .calculation-title {
+          font-family: $font-headline;
+          font-size: 28px;
+          font-style: italic;
+          color: $on-surface;
+        }
 
-//         .calculation-info {
-//           display: flex;
-//           align-items: center;
-//           grid-gap: 8px;
-//           font-family: $font-body;
-//           font-size: 12px;
-//           text-transform: uppercase;
-//           color: $on-neutral-variant;
-//         }
+        .calculation-info {
+          display: flex;
+          align-items: center;
+          grid-gap: 8px;
+          font-family: $font-body;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: $on-surface-variant;
+        }
 
-//         .icon {
-//           color: $primary;
-//           font-size: 14px;
-//         }
-//       }
+        .icon {
+          color: $surface;
+          font-size: 14px;
+        }
+      }
 
-//       .calculation-form {
-//         display: grid;
-//         grid-template-columns: 1fr 1fr 1fr;
-//         grid-gap: 24px;
+      .calculation-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 24px;
 
-//         .form-group {
-//           display: flex;
-//           flex-direction: column;
-//           gap: 8px;
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
 
-//           label {
-//             font-family: $font-label;
-//             font-size: 14px;
-//             font-weight: 600px;
-//             color: $on-neutral-variant;
-//           }
+          label {
+            font-family: $font-label;
+            font-size: 14px;
+            font-weight: 600px;
+            color: $on-surface-variant;
+          }
 
-//           input {
-//             padding: 12px;
-//             border-radius: 6px;
-//             border: none;
-//             font-size: 16px;
-//             font-family: $font-label;
-//             background: #fff;
-//             color: $neutral;
+          input {
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            font-family: $font-label;
+            background: #fff;
+            color: $surface;
 
-//             &::placeholder {
-//               color: #999;
-//             }
+            &::placeholder {
+              color: #999;
+            }
 
-//             &::focus {
-//               outline: none;
-//               box-shadow: 0 0 0 3px rgba($color: $primary, $alpha: 0.4);
-//             }
-//           }
-//         }
+            &::focus {
+              outline: none;
+              box-shadow: 0 0 0 3px rgba($color: $primary, $alpha: 0.4);
+            }
+          }
+        }
 
-//         .calculation-actions {
-//           display: flex;
-//           justify-content: flex-end;
-//           margin-top: 30px;
+        .calculation-actions {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 30px;
 
-//           .button-calculate {
-//             background: $primary;
-//             color: $neutral;
-//             padding: 14px 32px;
-//             border-radius: 8px;
-//             font-family: $font-label;
-//             font-weight: bold;
-//             text-transform: uppercase;
-//             cursor: pointer;
-//             display: flex;
-//             align-items: center;
-//             gap: 8px;
-//             transition: all 0.3s ease;
+          .button-calculate {
+            background: $primary;
+            color: $surface;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-family: $font-label;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
 
-//             &:hover {
-//               background: $primary;
-//               color: $on-neutral;
-//               transform: scale(0.95);
-//             }
+            &:hover {
+              background: $primary;
+              color: $on-surface;
+              transform: scale(0.95);
+            }
 
-//             &:active {
-//               transform: scale(0.95);
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+  }
+}
