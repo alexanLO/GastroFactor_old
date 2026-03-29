@@ -7,21 +7,20 @@
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">Gastro Factor</div>
-        <div class="menu">
-          <a href="">Home</a>
-          <a href="">Minhas Receitas</a>
-          <a href="">Sobre</a>
-        </div>
-        <div class="auth">
-          <a href="">Login</a>
-          <a href="">Cadastrar</a>
-          <img
-            alt="Chef Profile"
-            class="profile-image"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAq6afdSd512JpJfuRbpFuZCHapNOOnOnB7W28dA8nntoHs-eUYLh9u443PnVtzijERg-aBrraE_080xcbsEZeQtjWCfz1-jnWY_cXqjQNAV28jagUazJkuzoJagT8jKRh2d_eL2S38__1Z8kAE9Qf_HbbFIvgL38lNtmhsmSth10zB5czTm2ufNQ687fsfx0ih_sn2NIku-hMuUerVtU20ba6WJmFt8_D5KQPTsuLt9giT1QK9IZQ0hAqbFA2F6eiAyIjo_aB-hy"
-          />
-        </div>
+          <div class="logo">Gastro Factor</div>
+          <div class="menu">
+            <a href="" class="home">Home</a>
+            <a href="">Minhas Receitas</a>
+            <a href="">Sobre</a>
+          </div>
+          <div class="auth">
+            <a href="">Login</a>
+            <img
+              alt="Chef Profile"
+              class="profile-image"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAq6afdSd512JpJfuRbpFuZCHapNOOnOnB7W28dA8nntoHs-eUYLh9u443PnVtzijERg-aBrraE_080xcbsEZeQtjWCfz1-jnWY_cXqjQNAV28jagUazJkuzoJagT8jKRh2d_eL2S38__1Z8kAE9Qf_HbbFIvgL38lNtmhsmSth10zB5czTm2ufNQ687fsfx0ih_sn2NIku-hMuUerVtU20ba6WJmFt8_D5KQPTsuLt9giT1QK9IZQ0hAqbFA2F6eiAyIjo_aB-hy"
+            />
+          </div>
       </nav>
     </header>
 
@@ -44,6 +43,66 @@
             Transform raw ingredients into calculated culinary success with the industry-standard
             for yields and factors.
           </p>
+        </div>
+      </section>
+
+      <!-- Calculation Slate -->
+      <section class="calculation-section">
+        <div class="calculation-container">
+          <div class="calculation-panel">
+            <div class="calculation-header">
+              <h2 class="calculation-title">The Calculation Slate</h2>
+              <div class="calculation-info">
+                <span class="icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#e3e3e3"
+                  >
+                    <path
+                      d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                    /></svg
+                ></span>
+                Technical Sheet Input
+              </div>
+              <form action="" class="calculation-form">
+                <div class="form-group">
+                  <label for="food">Alimento</label>
+                  <input id="food" type="text" placeholder="Ex: Filé Mignon" />
+                </div>
+
+                <div class="form-group">
+                  <label for="grossWight">Peso Bruto (kg)</label>
+                  <input id="grossWight" type="text" placeholder="Ex: 1.000" step="0.001" />
+                </div>
+
+                <div class="form-group">
+                  <label for="netWight">Peso Líquido/Cozido (kg)</label>
+                  <input id="netWeight" type="text" placeholder="Ex: 1.000" step="0.001" />
+                </div>
+
+                <div class="calculation-actions">
+                  <button type="submit" class="button-calculate">
+                    Calcular
+                    <span class="icon"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e3e3e3"
+                      >
+                        <path
+                          d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
+                        /></svg
+                    ></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>

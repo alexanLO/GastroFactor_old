@@ -1,25 +1,94 @@
 @import 'normalize.css';
 
 // Paleta de cores
-$primary: #ffb86b;
-$primary-container: #cf7e00;
-$surface: #181210;
-$on-surface: #ede0dc;
+$inverse-surface: #ede0dc;
+$secondary: #e3beb8;
+$on-background: #ede0dc;
+$outline-variant: #594238;
+$on-secondary-fixed-variant: #5b403c;
+$surface-container-lowest: #130d0b;
+$secondary-fixed: #ffdad4;
+$surface-tint: #ffb86b;
+$surface-container-low: #201a18;
+$outline: #a88a7e;
+$surface-container-high: #2f2826;
+$primary-fixed-dim: #ffb86b;
 $on-surface-variant: #e0c0b2;
+$surface: #181210;
+$inverse-primary: #895100;
+$on-secondary-fixed: #2b1613;
+$tertiary: #c6c6c7;
+$secondary-container: #5b403c;
+$tertiary-fixed: #e2e2e2;
+$on-primary-fixed-variant: #683d00;
+$surface-container-highest: #3b3331;
+$error-container: #93000a;
+$on-primary-container: #3f2300;
+$tertiary-container: #909191;
+$background: #181210;
+$on-error-container: #ffdad6;
+$surface-variant: #3b3331;
+$on-secondary-container: #d1ada7;
+$error: #ffb4ab;
+$on-tertiary-container: #282a2a;
+$on-error: #690005;
+$on-secondary: #422a26;
+$on-primary: #492900;
+$primary: #ffb86b;
+$inverse-on-surface: #362f2c;
+$tertiary-fixed-dim: #c6c6c7;
+$surface-dim: #181210;
+$on-primary-fixed: #2c1700;
+$on-tertiary-fixed: #1a1c1c;
+$secondary-fixed-dim: #e3beb8;
+$primary-container: #cf7e00;
+$surface-container: #251e1c;
+$surface-bright: #3f3835;
+$on-surface: #ede0dc;
+$on-tertiary: #2f3131;
+$primary-fixed: #ffdcbc;
+$on-tertiary-fixed-variant: #454747;
+
+$border-radius: (
+  DEFAULT: 0.125rem,
+  lg: 0.25rem,
+  xl: 0.5rem,
+  full: 0.75rem,
+);
 
 // Fontes
-$font-headline: 'Newsreader', serif;
-$font-body: 'Work Sans', sans-serif;
-$font-label: 'Work Sans', sans-serif;
+$font-headline: Newsreader, serif;
+$font-body:
+  Work Sans,
+  sans-serif;
+$font-label:
+  Work Sans,
+  sans-serif;
+
+body {
+  background: $surface;
+  color: $on-surface;
+  font-family: $font-body;
+
+  ::selection {
+    background: $primary;
+    color: $on-primary;
+  }
+}
 
 // Navbar
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $surface;
+  background: $surface-container-lowest;
   color: $on-surface;
   padding: 20px;
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 
   .logo {
     font-family: $font-headline;
@@ -63,64 +132,182 @@ $font-label: 'Work Sans', sans-serif;
   }
 }
 
-// Hero Section
-.hero-section {
-  display: flex;
-  justify-content: flex-center;
-  position: relative;
-  align-items: center;
-  //min-height: 100vh;
-  padding-left: 10%;
-  height: 600px;
-  background: $surface;
-  color: $on-surface;
+// // Hero Section
+// .hero-section {
+//   display: flex;
+//   justify-content: flex-center;
+//   position: relative;
+//   align-items: center;
+//   //min-height: 100vh;
+//   padding-left: 10%;
+//   height: 600px;
+//   background: $neutral;
+//   color: $on-neutral;
 
-  .hero-background {
-    position: absolute;
-    inset: 0;
+//   .hero-background {
+//     position: absolute;
+//     inset: 0;
 
-    .hero-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(50%);
-    }
+//     .hero-image {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//       filter: brightness(50%);
+//     }
 
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, $surface, transparent);
-    }
-  }
+//     .hero-overlay {
+//       position: absolute;
+//       inset: 0;
+//       background: linear-gradient(to top, $neutral, transparent);
+//     }
+//   }
 
-  .hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: left;
-    max-width: 600px;
-    
+//   .hero-content {
+//     position: relative;
+//     z-index: 1;
+//     text-align: left;
+//     max-width: 600px;
 
-    .hero-label {
-      font-family: $font-label;
-      text-transform: uppercase;
-      letter-spacing: 0.3em;
-      font-size: 14px;
-      color: $primary;
-      display: block;
-      margin-bottom: 10px;
-    }
+//     .hero-label {
+//       font-family: $font-label;
+//       text-transform: uppercase;
+//       letter-spacing: 0.3em;
+//       font-size: 14px;
+//       color: $primary;
+//       display: block;
+//       margin-bottom: 10px;
+//     }
 
-    .hero-title {
-      font-family: $font-headline;
-      font-size: 48px;
-      font-style: italic;
-      margin-bottom: 20px;
-    }
+//     .hero-title {
+//       font-family: $font-headline;
+//       font-size: 48px;
+//       font-style: italic;
+//       margin-bottom: 20px;
+//     }
 
-    .hero-subtitle {
-      font-family: $font-body;
-      font-size: 18px;
-      color: $on-surface-variant;
-    }
-  }
-}
+//     .hero-subtitle {
+//       font-family: $font-body;
+//       font-size: 18px;
+//       color: $on-neutral-variant;
+//     }
+//   }
+// }
+
+// // Calculation Section
+// .calculation-section {
+//   padding: 40px 20px;
+//   background-color: $neutral;
+//   color: $on-neutral;
+
+//   .calculation-container {
+//     max-width: 900px;
+//     margin: 0 auto;
+
+//     .calculation-panel {
+//       background: rgba($color: rgb(59, 51, 49), $alpha: 0.5);
+//       backdrop-filter: blur(12px);
+//       border: 1px solid $on-neutral-variant;
+//       border-radius: 12px;
+//       padding: 40px;
+//       box-shadow: 0 8px 20px rgba($color: rgb(0, 0, 0), $alpha: 0.4);
+
+//       .calculation-header {
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         margin-bottom: 30px;
+
+//         .calculation-title {
+//           font-family: $font-headline;
+//           font-size: 28px;
+//           font-style: italic;
+//           color: $on-neutral;
+//         }
+
+//         .calculation-info {
+//           display: flex;
+//           align-items: center;
+//           grid-gap: 8px;
+//           font-family: $font-body;
+//           font-size: 12px;
+//           text-transform: uppercase;
+//           color: $on-neutral-variant;
+//         }
+
+//         .icon {
+//           color: $primary;
+//           font-size: 14px;
+//         }
+//       }
+
+//       .calculation-form {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr;
+//         grid-gap: 24px;
+
+//         .form-group {
+//           display: flex;
+//           flex-direction: column;
+//           gap: 8px;
+
+//           label {
+//             font-family: $font-label;
+//             font-size: 14px;
+//             font-weight: 600px;
+//             color: $on-neutral-variant;
+//           }
+
+//           input {
+//             padding: 12px;
+//             border-radius: 6px;
+//             border: none;
+//             font-size: 16px;
+//             font-family: $font-label;
+//             background: #fff;
+//             color: $neutral;
+
+//             &::placeholder {
+//               color: #999;
+//             }
+
+//             &::focus {
+//               outline: none;
+//               box-shadow: 0 0 0 3px rgba($color: $primary, $alpha: 0.4);
+//             }
+//           }
+//         }
+
+//         .calculation-actions {
+//           display: flex;
+//           justify-content: flex-end;
+//           margin-top: 30px;
+
+//           .button-calculate {
+//             background: $primary;
+//             color: $neutral;
+//             padding: 14px 32px;
+//             border-radius: 8px;
+//             font-family: $font-label;
+//             font-weight: bold;
+//             text-transform: uppercase;
+//             cursor: pointer;
+//             display: flex;
+//             align-items: center;
+//             gap: 8px;
+//             transition: all 0.3s ease;
+
+//             &:hover {
+//               background: $primary;
+//               color: $on-neutral;
+//               transform: scale(0.95);
+//             }
+
+//             &:active {
+//               transform: scale(0.95);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
