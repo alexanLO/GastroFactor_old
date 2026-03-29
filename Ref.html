@@ -1,0 +1,598 @@
+<!doctype html>
+
+<html class="dark" lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'inverse-surface': '#ede0dc',
+              secondary: '#e3beb8',
+              'on-background': '#ede0dc',
+              'outline-variant': '#594238',
+              'on-secondary-fixed-variant': '#5b403c',
+              'surface-container-lowest': '#130d0b',
+              'secondary-fixed': '#ffdad4',
+              'surface-tint': '#ffb86b',
+              'surface-container-low': '#201a18',
+              outline: '#a88a7e',
+              'surface-container-high': '#2f2826',
+              'primary-fixed-dim': '#ffb86b',
+              'on-surface-variant': '#e0c0b2',
+              surface: '#181210',
+              'inverse-primary': '#895100',
+              'on-secondary-fixed': '#2b1613',
+              tertiary: '#c6c6c7',
+              'secondary-container': '#5b403c',
+              'tertiary-fixed': '#e2e2e2',
+              'on-primary-fixed-variant': '#683d00',
+              'surface-container-highest': '#3b3331',
+              'error-container': '#93000a',
+              'on-primary-container': '#3f2300',
+              'tertiary-container': '#909191',
+              background: '#181210',
+              'on-error-container': '#ffdad6',
+              'surface-variant': '#3b3331',
+              'on-secondary-container': '#d1ada7',
+              error: '#ffb4ab',
+              'on-tertiary-container': '#282a2a',
+              'on-error': '#690005',
+              'on-secondary': '#422a26',
+              'on-primary': '#492900',
+              primary: '#ffb86b',
+              'inverse-on-surface': '#362f2c',
+              'tertiary-fixed-dim': '#c6c6c7',
+              'surface-dim': '#181210',
+              'on-primary-fixed': '#2c1700',
+              'on-tertiary-fixed': '#1a1c1c',
+              'secondary-fixed-dim': '#e3beb8',
+              'primary-container': '#cf7e00',
+              'surface-container': '#251e1c',
+              'surface-bright': '#3f3835',
+              'on-surface': '#ede0dc',
+              'on-tertiary': '#2f3131',
+              'primary-fixed': '#ffdcbc',
+              'on-tertiary-fixed-variant': '#454747',
+            },
+            fontFamily: {
+              headline: ['Newsreader'],
+              body: ['Work Sans'],
+              label: ['Work Sans'],
+            },
+            borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+        vertical-align: middle;
+      }
+      .glass-panel {
+        background: rgba(59, 51, 49, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+      .editorial-overlap {
+        margin-top: -120px;
+        position: relative;
+        z-index: 20;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <nav
+      class="bg-stone-950/80 backdrop-blur-md dark:bg-stone-950/80 docked full-width top-0 sticky z-50 shadow-2xl shadow-black/50"
+    >
+      <div class="flex justify-between items-center w-full px-12 py-6 max-w-full mx-auto">
+        <div class="text-2xl font-serif italic text-orange-400 tracking-tight">Gastro Factor</div>
+        <div class="hidden md:flex items-center gap-12">
+          <a
+            class="text-orange-400 font-bold border-b-2 border-orange-400 pb-1 transition-all"
+            href="{{DATA:SCREEN:SCREEN_8}}"
+            >Calculations</a
+          >
+          <a
+            class="text-stone-400 font-sans hover:text-stone-100 transition-colors"
+            href="{{DATA:SCREEN:SCREEN_12}}"
+            >Dashboard</a
+          >
+          <a class="text-stone-400 font-sans hover:text-stone-100 transition-colors" href="#"
+            >Sheets</a
+          >
+          <a class="text-stone-400 font-sans hover:text-stone-100 transition-colors" href="#"
+            >Inventory</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <a
+            class="font-sans text-xs uppercase tracking-widest text-stone-100 hover:text-orange-400 transition-colors"
+            href="{{DATA:SCREEN:SCREEN_16}}"
+            >Sign In</a
+          >
+          <div
+            class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/30"
+          >
+            <img
+              alt="Chef Profile"
+              class="w-full h-full object-cover"
+              data-alt="close-up portrait of a professional chef in white uniform with a serious and focused expression"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAq6afdSd512JpJfuRbpFuZCHapNOOnOnB7W28dA8nntoHs-eUYLh9u443PnVtzijERg-aBrraE_080xcbsEZeQtjWCfz1-jnWY_cXqjQNAV28jagUazJkuzoJagT8jKRh2d_eL2S38__1Z8kAE9Qf_HbbFIvgL38lNtmhsmSth10zB5czTm2ufNQ687fsfx0ih_sn2NIku-hMuUerVtU20ba6WJmFt8_D5KQPTsuLt9giT1QK9IZQ0hAqbFA2F6eiAyIjo_aB-hy"
+            />
+          </div>
+        </div>
+      </div>//final
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section class="relative h-[870px] w-full overflow-hidden flex items-center">
+        <div class="absolute inset-0 z-0">
+          <img
+            class="w-full h-full object-cover filter brightness-50"
+            data-alt="atmospheric wide shot of a high-end dimly lit professional restaurant kitchen with stainless steel surfaces and warm ambient lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgNHOvgysTBBg0Yspl3qkGqVoqp_sTUGFF0UfvkHK5it26xeRsVkeo_9ifNty5VzYr1geM-Yg6bJBJxjVRiKBxnbd7v-p-LtmB80FHo9WEvoHFsoZ6TGoWQx-vFGLzElYpr5XeHnbML7Y-8eT8IugVIuhUcUVqWV9y9gA8f43HvnOsJvTBQhrQW4ipcN5u7wpve37pusux0d5vhfLsGEMiKDDwpfP35R6aNqQ2BI4mjO_l7paCXUr7ubKAzopiJwM2AL_DDdCHaKqU"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 px-12 md:px-24 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center"
+        >
+          <div class="space-y-6">
+            <span class="text-primary font-label tracking-[0.3em] uppercase text-sm block"
+              >Culinary Mathematics</span
+            >
+            <h1
+              class="font-headline italic text-6xl md:text-8xl text-on-surface leading-none -ml-1"
+            >
+              Precision <br />on the Plate.
+            </h1>
+            <p
+              class="text-on-surface-variant text-lg md:text-xl max-w-md font-light leading-relaxed"
+            >
+              Transform raw ingredients into calculated culinary success with the industry-standard
+              for yields and factors.
+            </p>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Calculation Slate (Editorial Overlap) -->
+      <section class="editorial-overlap px-6 md:px-12">
+        <div class="max-w-5xl mx-auto">
+          <div
+            class="glass-panel p-8 md:p-12 rounded-xl shadow-2xl border border-outline-variant/10"
+          >
+            <div class="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+              <h2 class="font-headline text-3xl italic text-on-surface">The Calculation Slate</h2>
+              <div
+                class="flex items-center gap-2 text-on-surface-variant font-label text-xs uppercase tracking-widest"
+              >
+                <span class="material-symbols-outlined text-primary text-sm">info</span>
+                Technical Sheet Input
+              </div>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="space-y-3">
+                <label
+                  class="block font-label text-sm font-medium text-on-surface-variant tracking-wide"
+                  >Alimento</label
+                >
+                <input
+                  class="w-full bg-white text-surface p-4 rounded-md border-none focus:ring-2 focus:ring-primary text-lg font-body placeholder:text-stone-400"
+                  placeholder="Ex: Filé Mignon"
+                  type="text"
+                />
+              </div>
+              <div class="space-y-3">
+                <label
+                  class="block font-label text-sm font-medium text-on-surface-variant tracking-wide"
+                  >Peso Bruto (kg)</label
+                >
+                <input
+                  class="w-full bg-white text-surface p-4 rounded-md border-none focus:ring-2 focus:ring-primary text-lg font-body placeholder:text-stone-400"
+                  placeholder="1.000"
+                  step="0.001"
+                  type="number"
+                />
+              </div>
+              <div class="space-y-3">
+                <label
+                  class="block font-label text-sm font-medium text-on-surface-variant tracking-wide"
+                  >Peso Líquido/Cozido (kg)</label
+                >
+                <input
+                  class="w-full bg-white text-surface p-4 rounded-md border-none focus:ring-2 focus:ring-primary text-lg font-body placeholder:text-stone-400"
+                  placeholder="0.850"
+                  step="0.001"
+                  type="number"
+                />
+              </div>
+            </form>
+            <div class="mt-12 flex justify-end">
+              <button
+                class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-label font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20 flex items-center gap-3"
+              >
+                Calcular
+                <span class="material-symbols-outlined">calculate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Educational Content - Bento Grid -->
+      <section class="mt-32 px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Fator de Correção -->
+          <div
+            class="md:col-span-7 bg-surface-container-low p-12 rounded-xl flex flex-col justify-between min-h-[400px]"
+          >
+            <div>
+              <div class="flex items-center gap-4 mb-8">
+                <span class="w-12 h-[1px] bg-primary"></span>
+                <span class="font-label text-primary uppercase tracking-widest text-xs"
+                  >Essential Metrics</span
+                >
+              </div>
+              <h3 class="font-headline text-4xl mb-6 italic">Fator de Correção (FC)</h3>
+              <p class="text-on-surface-variant text-lg leading-relaxed font-light">
+                O índice que determina a perda de massa durante a limpeza e pré-preparo. É a relação
+                entre o Peso Bruto e o Peso Líquido. Essencial para o cálculo de compras e
+                precificação precisa.
+              </p>
+            </div>
+            <div class="mt-8 flex items-baseline gap-2">
+              <span class="font-headline text-5xl text-primary/50 italic">FC = PB / PL</span>
+            </div>
+          </div>
+          <!-- Fator de Cocção -->
+          <div
+            class="md:col-span-5 bg-surface-container-high p-12 rounded-xl flex flex-col justify-between"
+          >
+            <div>
+              <h3 class="font-headline text-4xl mb-6 italic">Fator de Cocção (FCy)</h3>
+              <p class="text-on-surface-variant leading-relaxed font-light">
+                Avalia o rendimento final após o processo térmico. Crucial para definir o tamanho
+                das porções servidas aos clientes.
+              </p>
+            </div>
+            <div class="bg-surface p-6 rounded-lg mt-8">
+              <p class="text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-2">
+                Impacto no custo
+              </p>
+              <div class="w-full bg-outline-variant/20 h-1.5 rounded-full overflow-hidden">
+                <div class="bg-primary h-full w-[75%]"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Registration Banner -->
+          <div
+            class="md:col-span-12 relative overflow-hidden bg-primary-container rounded-xl p-12 flex flex-col md:flex-row items-center justify-between gap-8 group"
+          >
+            <div
+              class="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"
+            ></div>
+            <div class="relative z-10 max-w-2xl">
+              <h3 class="font-headline text-3xl text-on-primary-container mb-4">
+                Centralize seu conhecimento culinário.
+              </h3>
+              <p class="text-on-primary-container/80 text-lg">
+                Crie sua conta para salvar suas receitas e exportar fichas técnicas profissionais
+                com um clique.
+              </p>
+            </div>
+            <div class="relative z-10 shrink-0">
+              <a
+                class="bg-on-primary-container text-primary-container px-10 py-4 rounded-md font-label font-bold uppercase tracking-widest hover:bg-surface transition-colors shadow-2xl inline-block"
+                href="{{DATA:SCREEN:SCREEN_16}}"
+                >Criar Conta Grátis</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <!-- Signature Imagery -->
+      <section class="mt-40 grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div class="h-[600px] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="close-up of hands cleaning a large sea bass on a stainless steel kitchen counter with focused lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkwjdOFeCn2YU9_0CyR_faUwPYdr3e4t02hWs27CXucqaHU9Z2yPxedH0F2zYDsBTR1xdqiyiKjYHgOH36L1rsiGyNN5l2J1GRk9m-cWdVbP9tKv-DN8tB4VfgTCZcCSHubf6s5xRcOOIS0OHwG4SS_fvA4fjCfXzUcChfFOKJpbpFpGBBu3vx0B2o09LPayo3ZNMe_lRcgqiRl7cwtuOc59T8Qp3tNKqncdnDXUeQRnI5yWlkoIT3wHQLshbSab-EdElKKWZ58VMs"
+          />
+          <div class="absolute inset-0 bg-surface/30"></div>
+          <div class="absolute bottom-12 left-12">
+            <p class="font-headline italic text-4xl text-white">Efficiency starts with data.</p>
+          </div>
+        </div>
+        <div class="h-[600px] relative overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            data-alt="overhead shot of mise en place with organized vegetables and scales on a dark rustic table"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhns3cbDIxTlCv6e03-s7eqry5s5UWLeldL86UysGqRwxkWBaM4FTtJ5KjIdH7Qj3A_V-sc_COzDYOurGZtYhKhqdS_WtGb9pQOltkyPk7mOf9miaup61RSb17Z9b56Sb7Bc-bEnebKKJwCGyspJva7Udsoo8wM74moXHzvcVL_yQ1vQrqnUogSyZNobOhWkaNrGfizBWdSb8AValFcNf6O3tSPCPYl7O03mrBJLlYQhG8-IwsdI9QqDtFa2s0_FpQ89QAzOK4QVmq"
+          />
+          <div class="absolute inset-0 bg-surface/30"></div>
+          <div class="absolute top-12 right-12 text-right">
+            <p class="font-headline italic text-4xl text-white">Artistry meets algebra.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-stone-950 dark:bg-stone-950 w-full py-16 mt-20 border-t border-stone-800/30">
+      <div
+        class="max-w-7xl mx-auto px-12 flex flex-col md:flex-row justify-between items-center gap-8"
+      >
+        <div class="space-y-4 text-center md:text-left">
+          <div class="font-serif text-lg text-stone-300">Gastro Factor</div>
+          <p class="font-sans text-xs uppercase tracking-widest text-stone-500 max-w-sm">
+            © 2024 Gastro Factor. The Modern Maître D' of Culinary Mathematics.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8">
+          <a
+            class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-stone-300 transition-colors underline decoration-orange-400/50 underline-offset-4"
+            href="#"
+            >Unit Converter</a
+          >
+          <a
+            class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-stone-300 transition-colors underline decoration-orange-400/50 underline-offset-4"
+            href="#"
+            >Yield Guide</a
+          >
+          <a
+            class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-stone-300 transition-colors underline decoration-orange-400/50 underline-offset-4"
+            href="#"
+            >Storage Temps</a
+          >
+          <a
+            class="font-sans text-xs uppercase tracking-widest text-stone-500 hover:text-stone-300 transition-colors underline decoration-orange-400/50 underline-offset-4"
+            href="#"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+
+
+  <!-- Calculation Slate (Editorial Overlap) -->
+      <section class="calculation-section">
+        <div class="calculation-container">
+          <div class="calculation-panel">
+            <div class="calculation-header">
+              <h2 class="calculation-title">The Calculation Slate</h2>
+              <div class="calculation-info">
+                <span class="icon">ℹ️</span>
+                Technical Sheet Input
+              </div>
+            </div>
+
+            <form class="calculation-form">
+              <div class="form-group">
+                <label for="alimento">Alimento</label>
+                <input id="alimento" type="text" placeholder="Ex: Filé Mignon" />
+              </div>
+
+              <div class="form-group">
+                <label for="pesoBruto">Peso Bruto (kg)</label>
+                <input id="pesoBruto" type="number" step="0.001" placeholder="1.000" />
+              </div>
+
+              <div class="form-group">
+                <label for="pesoLiquido">Peso Líquido/Cozido (kg)</label>
+                <input id="pesoLiquido" type="number" step="0.001" placeholder="0.850" />
+              </div>
+            </form>
+
+            <div class="calculation-actions">
+              <button type="submit" class="btn-calculate">
+                Calcular <span class="icon">🧮</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        // Calculation Section
+  .calculation-section {
+    padding: 40px 20px;
+    background: $surface;
+    color: $on-surface;
+  }
+
+  .calculation-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .calculation-panel {
+    background: rgba(59, 51, 49, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid $on-surface-variant;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  .calculation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .calculation-title {
+      font-family: 'Newsreader', serif;
+      font-size: 28px;
+      font-style: italic;
+      color: $on-surface;
+    }
+
+    .calculation-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $on-surface-variant;
+
+      .icon {
+        color: $primary;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .calculation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        color: $on-surface-variant;
+      }
+
+      input {
+        padding: 12px;
+        border-radius: 6px;
+        border: none;
+        font-size: 16px;
+        font-family: 'Work Sans', sans-serif;
+        background: #fff;
+        color: $surface;
+
+        &::placeholder {
+          color: #999;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 0 3px rgba($primary, 0.4);
+        }
+      }
+    }
+  }
+
+  .calculation-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+
+    .btn-calculate {
+      background: $primary;
+      color: $surface;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $primary-container;
+        color: $on-surface;
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+
+
+
+
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastro Factor</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Gastro Factor</div>
+        <div class="menu">
+          <a href="">Home</a>
+          <a href="">Minhas Receitas</a>
+          <a href="">Sobre</a>
+        </div>
+        <div class="auth">
+          <a href="">Login</a>
+          <a href="">Cadastrar</a>
+          <img
+            alt="Chef Profile"
+            class="profile-image"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAq6afdSd512JpJfuRbpFuZCHapNOOnOnB7W28dA8nntoHs-eUYLh9u443PnVtzijERg-aBrraE_080xcbsEZeQtjWCfz1-jnWY_cXqjQNAV28jagUazJkuzoJagT8jKRh2d_eL2S38__1Z8kAE9Qf_HbbFIvgL38lNtmhsmSth10zB5czTm2ufNQ687fsfx0ih_sn2NIku-hMuUerVtU20ba6WJmFt8_D5KQPTsuLt9giT1QK9IZQ0hAqbFA2F6eiAyIjo_aB-hy"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-background">
+          <img
+            class="hero-image"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgNHOvgysTBBg0Yspl3qkGqVoqp_sTUGFF0UfvkHK5it26xeRsVkeo_9ifNty5VzYr1geM-Yg6bJBJxjVRiKBxnbd7v-p-LtmB80FHo9WEvoHFsoZ6TGoWQx-vFGLzElYpr5XeHnbML7Y-8eT8IugVIuhUcUVqWV9y9gA8f43HvnOsJvTBQhrQW4ipcN5u7wpve37pusux0d5vhfLsGEMiKDDwpfP35R6aNqQ2BI4mjO_l7paCXUr7ubKAzopiJwM2AL_DDdCHaKqU"
+            alt="Cozinha profissional"
+          />
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+          <span class="hero-label">Culinary Mathematics</span>
+          <h1 class="hero-title">Precision on the Plate.</h1>
+          <p class="hero-subtitle">
+            Transform raw ingredients into calculated culinary success with the industry-standard
+            for yields and factors.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

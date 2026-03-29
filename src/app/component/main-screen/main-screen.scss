@@ -1,0 +1,126 @@
+@import 'normalize.css';
+
+// Paleta de cores
+$primary: #ffb86b;
+$primary-container: #cf7e00;
+$surface: #181210;
+$on-surface: #ede0dc;
+$on-surface-variant: #e0c0b2;
+
+// Fontes
+$font-headline: 'Newsreader', serif;
+$font-body: 'Work Sans', sans-serif;
+$font-label: 'Work Sans', sans-serif;
+
+// Navbar
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $surface;
+  color: $on-surface;
+  padding: 20px;
+
+  .logo {
+    font-family: $font-headline;
+    font-size: 24px;
+    font-style: italic;
+    color: $primary;
+  }
+
+  .menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: $on-surface;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    a {
+      color: $on-surface;
+      text-decoration: none;
+      font-size: 14px;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .profile-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid $primary-container;
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  display: flex;
+  justify-content: flex-center;
+  position: relative;
+  align-items: center;
+  //min-height: 100vh;
+  padding-left: 10%;
+  height: 600px;
+  background: $surface;
+  color: $on-surface;
+
+  .hero-background {
+    position: absolute;
+    inset: 0;
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(50%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, $surface, transparent);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    max-width: 600px;
+    
+
+    .hero-label {
+      font-family: $font-label;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 14px;
+      color: $primary;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: $font-headline;
+      font-size: 48px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-family: $font-body;
+      font-size: 18px;
+      color: $on-surface-variant;
+    }
+  }
+}
