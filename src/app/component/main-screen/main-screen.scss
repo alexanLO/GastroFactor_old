@@ -668,9 +668,9 @@ body {
       gap: 2rem;
 
       .footer-link {
-        display: inline-flex; // coloca ícone e texto lado a lado
-        align-items: center; // centraliza verticalmente
-        gap: 0.5rem; // espaço entre ícone e texto (~8px)
+        display: inline-flex; 
+        align-items: center; 
+        gap: 0.5rem; 
 
         font-family: $font-body;
         font-size: 0.75rem;
