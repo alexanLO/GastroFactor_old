@@ -101,9 +101,16 @@ body {
     margin: 0 10px;
     text-decoration: none;
     color: $on-surface;
+    padding-bottom: 4px;
 
     &:hover {
       color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+      border-bottom: 2px solid $primary;
+      font-weight: bold;
     }
   }
 
@@ -132,7 +139,7 @@ body {
   }
 }
 
-// // Hero Section
+// Hero Section
 .hero-section {
   display: flex;
   justify-content: flex-center;
@@ -156,8 +163,7 @@ body {
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, $surface 0%, transparent 25%
-      );
+      background: linear-gradient(to top, $surface 0%, transparent 25%);
     }
   }
 
@@ -205,7 +211,6 @@ body {
     .calculation-panel {
       background: rgba($color: rgb(59, 51, 49), $alpha: 0.5);
       backdrop-filter: blur(6px);
-      border: 1px solid $on-surface-variant;
       border-radius: 12px;
       padding: 40px;
       box-shadow: 0 8px 20px rgba($color: rgb(0, 0, 0), $alpha: 0.4);
