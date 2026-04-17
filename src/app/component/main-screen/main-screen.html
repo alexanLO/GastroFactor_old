@@ -39,9 +39,14 @@
 
         <div class="hero-content">
           <span class="hero-label">Matemática Culinária</span>
-          <h1 class="hero-title">Precisão <br> no Prato.</h1>
+          <h1 class="hero-title">
+            Precisão <br />
+            no Prato.
+          </h1>
           <p class="hero-subtitle">
-           Transforme ingredientes brutos em sucesso <br> culinário calculado com os padrões da <br> indústria.
+            Transforme ingredientes brutos em sucesso <br />
+            culinário calculado com os padrões da <br />
+            indústria.
           </p>
         </div>
       </section>
@@ -71,18 +76,22 @@
 
             <form action="" class="calculation-form">
               <div class="form-group">
-                <label for="food">Alimento</label>
-                <input id="food" type="text" placeholder="Ex: Filé Mignon" />
+                <label for="foodName">Nome do Alimento</label>
+                <input id="foodName" type="text" placeholder="Ex: Filé Mignon" />
               </div>
 
               <div class="form-group">
-                <label for="grossWight">Peso Bruto (kg)</label>
-                <input id="grossWight" type="text" placeholder="Ex: 1.000" step="0.001" />
+                <label for="foodWight">Peso do Alimento (kg)</label>
+                <input id="foodWight" type="text" placeholder="Ex: 1.000" step="0.001" />
               </div>
 
               <div class="form-group">
-                <label for="netWight">Peso Líquido/Cozido (kg)</label>
-                <input id="netWeight" type="text" placeholder="Ex: 1.000" step="0.001" />
+                <label for="inputTipo">Tipo de Peso</label>
+                <select id="inputTipo" class="select-field">
+                  <option value="bruto">Peso Bruto</option>
+                  <option value="liquido">Peso Líquido</option>
+                  <option value="cozido">Peso Cozido</option>
+                </select>
               </div>
             </form>
             <div class="calculation-actions">
@@ -120,8 +129,8 @@
             </div>
             <div class="correction-info">
               <p>
-                O índice que determina a perda de massa durante a limpeza e <br>
-                preparo. É a relação entre o Peso Bruto e o Peso Líquido. Essencial <br>
+                O índice que determina a perda de massa durante a limpeza e <br />
+                preparo. É a relação entre o Peso Bruto e o Peso Líquido. Essencial <br />
                 para o cálculo de compras e precificação precisa.
               </p>
             </div>
@@ -135,8 +144,8 @@
             <div class="coccion-header">
               <h3 class="coccion-title">Fator de Cocção (FCy)</h3>
               <p>
-                Avalia o rendimento final após o processo <br>
-                térmico. Crucial para definir o tamanho das <br>
+                Avalia o rendimento final após o processo <br />
+                térmico. Crucial para definir o tamanho das <br />
                 porções servidas aos clientes.
               </p>
             </div>
@@ -198,7 +207,8 @@
         <div class="footer-brand">
           <div class="footer-logo">Gastro Factor</div>
           <p class="footer-description">
-            © 2026 Gastro Factor. The Modern Maître D' <br> of Culinary Mathematics.
+            © 2026 Gastro Factor. The Modern Maître D' <br />
+            of Culinary Mathematics.
           </p>
         </div>
 

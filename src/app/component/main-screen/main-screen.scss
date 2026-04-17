@@ -273,6 +273,33 @@ body {
             font-weight: 600;
             color: $on-surface-variant;
           }
+          
+          .select-field {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+            font-family: 'Work Sans', sans-serif;
+            background: #fff;
+            color: $surface;
+            appearance: none; // remove estilo padrão do select
+
+            // Ícone de seta customizado
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23181210' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+
+            &::placeholder {
+              color: #999;
+            }
+
+            &:focus {
+              outline: none;
+              box-shadow: 0 0 0 3px rgba($primary, 0.4);
+            }
+          }
 
           input {
             padding: 14px;
@@ -668,9 +695,9 @@ body {
       gap: 2rem;
 
       .footer-link {
-        display: inline-flex; 
-        align-items: center; 
-        gap: 0.5rem; 
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
 
         font-family: $font-body;
         font-size: 0.75rem;
