@@ -30,7 +30,7 @@
           },
           "configurations": {
             "production": {
-                "replace": "src/env/environment.ts",
+              "replace": "src/env/environment.ts",
               "with": "src/env/environment.prod.ts",
               "budgets": [
                 {
@@ -69,7 +69,7 @@
             "production": {
               "buildTarget": "GastroFactor:build:production"
             },
-              "homologation": {
+            "homologation": {
               "buildTarget": "GastroFactor:build:homologation"
             },
             "local": {
