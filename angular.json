@@ -30,8 +30,12 @@
           },
           "configurations": {
             "production": {
-              "replace": "src/env/environment.ts",
-              "with": "src/env/environment.prod.ts",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -47,15 +51,23 @@
               "outputHashing": "all"
             },
             "homologation": {
-              "replace": "src/env/environment.ts",
-              "with": "src/env/environment.hom.ts",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hom.ts"
+                }
+              ],
               "optimization": true,
               "extractLicenses": true,
               "sourceMap": false
             },
             "local": {
-              "replace": "src/env/environment.ts",
-              "with": "src/env/environment.local.ts",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
