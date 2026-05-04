@@ -65,15 +65,9 @@ $font-label:
   Work Sans,
   sans-serif;
 
-body {
-  background: $surface;
-  color: $on-surface;
-  font-family: $font-body;
-
-  ::selection {
-    background: $primary;
-    color: $on-primary;
-  }
+// Estilos para o host do componente
+.main-screen-host {
+  min-height: 100vh;
 }
 
 // Navbar

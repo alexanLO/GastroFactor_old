@@ -1,0 +1,39 @@
+<div class="results-modal-overlay" (click)="onClose()">
+  <div class="results-modal" (click)="$event.stopPropagation()">
+    <div class="results-modal__container">
+      <header class="results-modal__header">
+        <h2 class="results-modal__title">Resultado da Ficha</h2>
+      </header>
+
+      <section class="results-modal__body">
+        <div class="results-modal__section">
+          <span class="results-modal__label">Alimento</span>
+          <p class="results-modal__value results-modal__value--headline">
+            {{ result?.foodName || 'Não informado' }}
+          </p>
+        </div>
+
+        <div class="results-modal__grid">
+          <div class="results-modal__section">
+            <span class="results-modal__label">Peso Bruto</span>
+            <p class="results-modal__value">{{ result?.grossWeight || '0,000' }} kg</p>
+          </div>
+          <div class="results-modal__section">
+            <span class="results-modal__label">Peso Líquido</span>
+            <p class="results-modal__value">{{ result?.netWeight || '0,000' }} kg</p>
+          </div>
+          <div class="results-modal__section">
+            <span class="results-modal__label">Peso Cozido</span>
+            <p class="results-modal__value">{{ result?.cookedWeight || '0,000' }} kg</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="results-modal__footer">
+        <div class="results-modal__button-container">
+          <button class="results-modal__button" (click)="onClose()">Fechar</button>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>

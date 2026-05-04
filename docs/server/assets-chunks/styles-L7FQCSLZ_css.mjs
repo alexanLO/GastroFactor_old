@@ -1,0 +1,2 @@
+export default `html,body{height:100%;margin:0;padding:0}body{background:#181210;color:#ede0dc;font-family:Work Sans,sans-serif}body ::selection{background:#ffb86b;color:#492900}body.modal-open{overflow:hidden}
+`;

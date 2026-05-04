@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MainScreen } from "./component/main-screen/main-screen";
+import { MainScreen } from "./pages/main-screen/main-screen";
 
 @Component({
+  standalone: true,
   selector: 'app-root',
   imports: [MainScreen],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
   protected readonly title = signal('GastroFactor');

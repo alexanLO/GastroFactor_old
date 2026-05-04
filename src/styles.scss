@@ -35,5 +35,30 @@
 // }
 // /* You can add global styles to this file, and also import other style files */
 
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Paleta de cores global
+$surface: #181210;
+$on-surface: #ede0dc;
+$primary: #ffb86b;
+$on-primary: #492900;
+$font-body: Work Sans, sans-serif;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $surface;
+  color: $on-surface;
+  font-family: $font-body;
+
+  ::selection {
+    background: $primary;
+    color: $on-primary;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
