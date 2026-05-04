@@ -4,5 +4,5 @@
  */
 export const environment = {
   production: false,
-  srvFactorApi: 'http://localhost:8081/'
+  srvFactorApi: 'https://backend-9b44.onrender.com/'
 };
