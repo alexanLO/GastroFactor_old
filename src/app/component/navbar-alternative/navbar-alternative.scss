@@ -1,0 +1,100 @@
+@use 'variables' as *;
+@import 'normalize.css';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $surface-container-lowest;
+  color: $on-surface;
+  padding: 20px;
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+
+  .logo {
+    font-family: $font-headline;
+    font-size: 24px;
+    font-style: italic;
+    color: $primary;
+  }
+
+  .menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: $on-surface;
+    padding-bottom: 4px;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &.active {
+      color: $primary;
+      border-bottom: 2px solid $primary;
+      font-weight: bold;
+    }
+  }
+
+  .auth-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    .btn-login {
+      color: $primary;
+      font-family: 'Work Sans', sans-serif;
+      font-weight: bold;
+      border: none; // remove a borda padrão do botão
+      border-bottom: 2px solid $primary;
+      background: transparent;
+      padding: 0;
+      padding-bottom: 0.25rem;
+      cursor: pointer;
+      transition:
+        color 0.3s,
+        transform 0.15s;
+
+      &:hover {
+        color: $primary-fixed;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .btn-signup {
+      background-color: $primary;
+      color: $on-primary;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 0.25rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition:
+        opacity 0.3s,
+        transform 0.15s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
