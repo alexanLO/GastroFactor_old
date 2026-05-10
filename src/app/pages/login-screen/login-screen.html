@@ -1,0 +1,109 @@
+<app-navbar-alternative></app-navbar-alternative>
+
+<main>
+  <!-- Editorial Section -->
+  <section class="editorial-container">
+    <div class="editorial-overlay"></div>
+
+    <figure class="editorial-image-wrapper">
+      <img
+        src="/chef-precision.png"
+        alt="Chef preparando um prato gourmet com precisão"
+        class="editorial-image"
+      />
+
+      <figcaption class="visually-hidden">
+        Close-up de um chef profissional montando um prato gourmet com pinças em uma cozinha escura
+        e iluminada em tons quentes.
+      </figcaption>
+    </figure>
+
+    <article class="editorial-content">
+      <header>
+        <h1 class="editorial-title">A precisão encontra a paixão.</h1>
+      </header>
+
+      <p class="editorial-text">
+        Onde a matemática culinária se transforma em <br />
+        arte. Acesse seu painel de mestre e domine sua <br />
+        cozinha.
+      </p>
+
+      <section class="editorial-stats" aria-label="Estatísticas da plataforma">
+        <div class="stat-block">
+          <strong class="stat-value">12k+</strong>
+          <span class="stat-label">Receitas</span>
+        </div>
+
+        <div class="stat-divider" role="separator"></div>
+        <div class="stat-block">
+          <strong class="stat-value">0.1g</strong>
+          <span class="stat-label">Precisão</span>
+        </div>
+      </section>
+    </article>
+  </section>
+
+  <!-- Right Side: Login Form -->
+  <section class="login-section">
+    <div class="login-container">
+      <header class="login-header">
+        <h2 class="login-title">Bem-vindo de volta</h2>
+        <p class="login-subtitle">Insira suas credenciais para acessar o Gastro Factor.</p>
+      </header>
+
+      <form class="login-form" aria-label="Formulário de login">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" placeholder="chef@gastroworld.com" required />
+        </div>
+
+        <div class="form-group">
+          <div class="form-label-row">
+            <label for="password">Senha</label>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
+
+          <div class="input-wrapper">
+            <input
+              id="password"
+              [type]="hide ? 'password' : 'text'"
+              placeholder="••••••••"
+              required
+            />
+            <i class="material-icons toggle-password" matSuffix (click)="hide = !hide">
+              {{ hide ? 'visibility' : 'visibility_off' }}
+            </i>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-submit">Entrar no Dashboard</button>
+      </form>
+
+      <div class="divider">
+        <hr />
+        <span>ou acesse com</span>
+        <hr />
+      </div>
+
+      <section class="social-login">
+        <button class="btn-social google">
+          <img src="/google-logo.png" alt="Logo do Google" data-alt="Google logo icon" />
+          <span>Google</span>
+        </button>
+
+        <button class="btn-social apple">
+          <img src="/ios-logo.png" alt="Logo da Apple" data-alt="Apple logo icon" />
+          <span>Apple</span>
+        </button>
+      </section>
+
+      <p class="register-text">
+        Novo por aqui?
+        <a href="/cadastrar">Crie sua conta profissional</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

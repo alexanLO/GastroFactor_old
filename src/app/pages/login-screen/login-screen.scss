@@ -1,0 +1,322 @@
+@use 'variables' as *;
+@import 'normalize.css';
+
+main {
+  display: flex;
+  flex-grow: 1;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+//Editorial Section
+.editorial-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-shadow: 1px sha;
+
+  .editorial-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, $surface 30%, transparent);
+    z-index: 10;
+    opacity: 0.6;
+  }
+
+  .editorial-image-wrapper {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+
+    .editorial-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .editorial-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem;
+    max-width: 42rem;
+
+    .editorial-title {
+      font-family: $font-headline;
+      font-size: 1.25rem;
+      line-height: 1.25;
+      color: $primary;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .editorial-text {
+      font-family: $font-body;
+      font-size: 1.25rem;
+      line-height: 1.625;
+      color: $on-surface-variant;
+      opacity: 0.9;
+    }
+
+    .editorial-stats {
+      margin-top: 3rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      .stat-block {
+        display: flex;
+        flex-direction: column;
+
+        .stat-value {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+          font-family: $font-headline;
+          color: $primary;
+        }
+
+        .stat-label {
+          font-size: 0.75rem;
+          line-height: 1rem;
+          font-family: $font-label;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          color: $outline;
+        }
+      }
+    }
+  }
+}
+
+// Right Side: Login Form
+.login-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: $surface;
+
+  .login-container {
+    width: 100%;
+    max-width: 28rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .login-header {
+      .login-title {
+        font-family: $font-headline;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        color: $on-surface;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+      }
+
+      .login-subtitle {
+        margin-top: -1rem;
+        font-family: $font-body;
+        color: $on-surface-variant;
+      }
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        label {
+          font-size: 0.75rem;
+          line-height: 1rem;
+          font-family: $font-label;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: $on-surface-variant;
+        }
+
+        input {
+          background-color: $surface-container-high;
+          border: none;
+          border-radius: 0.5rem;
+          padding: 1rem;
+          color: $on-surface;
+          transition: all 0.3s;
+
+          &::placeholder {
+            color: $outline;
+            opacity: 0.5;
+          }
+
+          &:focus {
+            outline: none;
+            background-color: #fff;
+            color: $surface;
+            box-shadow: 0 0 0 2px $primary;
+          }
+        }
+      }
+
+      .form-label-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.25rem;
+
+        .forgot-password {
+          font-size: 0.5rem;
+          color: $primary;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        input {
+          width: 100%;
+          padding: 1rem 2.5rem 1rem 1rem;
+        }
+
+        .toggle-password {
+          position: absolute;
+          right: 0.75rem;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: $on-surface-variant;
+          cursor: pointer;
+          font-size: 1.25rem;
+
+          &:hover {
+            color: $on-surface;
+          }
+        }
+      }
+
+      .btn-submit {
+        width: 100%;
+        background: linear-gradient(to bottom right, $primary, $primary-container);
+        color: $on-primary;
+        padding: 1rem;
+        border: none;
+        margin-top: 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 1.125rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+          transform: translate(0, -1px);
+          color: $primary-fixed;
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+
+    .divider {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      hr {
+        flex-grow: 1;
+        opacity: 0.2;
+      }
+
+      span {
+        flex-shrink: 1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-family: $font-label;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $on-surface-variant;
+      }
+    }
+
+    .social-login {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .btn-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $on-surface;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: $surface-container-high;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        font-family: $font-headline;
+        border: 1px solid rgba($color: $outline-variant, $alpha: 0.1);
+        cursor: pointer;
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease;
+
+        &:hover {
+          background-color: $surface-variant;
+        }
+
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+
+    .register-text {
+      text-align: center;
+      font-family: $font-body;
+      color: $on-surface-variant;
+      margin-top: 1rem;
+
+      a {
+        color: $primary;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

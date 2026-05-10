@@ -61,6 +61,8 @@
 
       &:hover {
         color: $primary-fixed;
+        border-bottom: 3px solid $primary-fixed;
+        transform: translate(0, -1px);
       }
 
       &:active {
@@ -85,7 +87,8 @@
         transform 0.15s;
 
       &:hover {
-        opacity: 0.9;
+        background: $primary-fixed;
+        transform: translate(0, -1px);
       }
 
       &:active {
