@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CalculationService } from '../../core/services/calculation.service';
@@ -10,7 +10,7 @@ import { Footer } from '../../component/footer/footer';
 @Component({
   standalone: true,
   selector: 'app-main-screen',
-  imports: [CommonModule, FormsModule, CalcularDialog, Footer, RouterLink],
+  imports: [FormsModule, CalcularDialog, Footer, RouterLink],
   templateUrl: './main-screen.html',
   styleUrls: ['./main-screen.scss'],
 })

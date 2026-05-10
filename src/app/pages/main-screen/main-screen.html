@@ -13,202 +13,204 @@
         alt="Chef Profile"
         class="profile-image"
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuAq6afdSd512JpJfuRbpFuZCHapNOOnOnB7W28dA8nntoHs-eUYLh9u443PnVtzijERg-aBrraE_080xcbsEZeQtjWCfz1-jnWY_cXqjQNAV28jagUazJkuzoJagT8jKRh2d_eL2S38__1Z8kAE9Qf_HbbFIvgL38lNtmhsmSth10zB5czTm2ufNQ687fsfx0ih_sn2NIku-hMuUerVtU20ba6WJmFt8_D5KQPTsuLt9giT1QK9IZQ0hAqbFA2F6eiAyIjo_aB-hy"
-      />
-    </div>
-  </nav>
-</header>
-
-<main>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-background">
-      <img
-        class="hero-image"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgNHOvgysTBBg0Yspl3qkGqVoqp_sTUGFF0UfvkHK5it26xeRsVkeo_9ifNty5VzYr1geM-Yg6bJBJxjVRiKBxnbd7v-p-LtmB80FHo9WEvoHFsoZ6TGoWQx-vFGLzElYpr5XeHnbML7Y-8eT8IugVIuhUcUVqWV9y9gA8f43HvnOsJvTBQhrQW4ipcN5u7wpve37pusux0d5vhfLsGEMiKDDwpfP35R6aNqQ2BI4mjO_l7paCXUr7ubKAzopiJwM2AL_DDdCHaKqU"
-        alt="Cozinha profissional"
-      />
-      <div class="hero-overlay"></div>
-    </div>
-
-    <div class="hero-content">
-      <span class="hero-label">Matemática Culinária</span>
-      <h1 class="hero-title">
-        Precisão <br />
-        no Prato.
-      </h1>
-      <p class="hero-subtitle">
-        Transforme ingredientes brutos em sucesso <br />
-        culinário calculado com os padrões da <br />
-        indústria.
-      </p>
-    </div>
-  </section>
-
-  <!-- Calculation Slate -->
-  <section class="calculation-section">
-    <div class="calculation-container">
-      <div class="calculation-panel">
-        <div class="calculation-header">
-          <h2 class="calculation-title">Painel de Cálculo</h2>
-          <div class="calculation-info">
-            <span class="icon"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="15px"
-                viewBox="0 -960 960 960"
-                width="15px"
-                fill="#ffb86b"
-              >
-                <path
-                  d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
-                /></svg
-            ></span>
-            Entrada de Ficha Técnica
-          </div>
-        </div>
-
-        <form class="calculation-form">
-          <div class="form-group">
-            <label for="foodName">Nome do Alimento</label>
-            <input
-              id="foodName"
-              type="text"
-              placeholder="Ex: Filé Mignon"
-              [(ngModel)]="foodName"
-              name="foodName"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="foodWight">Peso do Alimento (kg)</label>
-            <input
-              id="foodWight"
-              type="number"
-              placeholder="Ex: 1.000"
-              step="0.001"
-              [(ngModel)]="foodWeight"
-              name="foodWeight"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="inputTipo">Tipo de Peso</label>
-            <select id="inputTipo" class="select-field" [(ngModel)]="typeWeight" name="typeWeight">
-              <option value="bruto">Peso Bruto</option>
-              <option value="liquido">Peso Líquido</option>
-              <option value="cozido">Peso Cozido</option>
-            </select>
-          </div>
-        </form>
-        <div class="calculation-actions">
-          <button type="button" class="button-calculate" (click)="onCalculate()">
-            Calcular
-            <span class="icon"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#181210"
-              >
-                <path
-                  d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
-                /></svg
-            ></span>
-          </button>
-        </div>
+        />
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <!-- Seção Conteúdo Educacional -->
-  <section class="education-section">
-    <div class="education-container">
-      <!-- Fator de Correção -->
-      <div class="correction-factor-container">
-        <div class="correction-metrics">
-          <span></span>
-          <span> Metricas Essenciais </span>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-background">
+        <img
+          class="hero-image"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgNHOvgysTBBg0Yspl3qkGqVoqp_sTUGFF0UfvkHK5it26xeRsVkeo_9ifNty5VzYr1geM-Yg6bJBJxjVRiKBxnbd7v-p-LtmB80FHo9WEvoHFsoZ6TGoWQx-vFGLzElYpr5XeHnbML7Y-8eT8IugVIuhUcUVqWV9y9gA8f43HvnOsJvTBQhrQW4ipcN5u7wpve37pusux0d5vhfLsGEMiKDDwpfP35R6aNqQ2BI4mjO_l7paCXUr7ubKAzopiJwM2AL_DDdCHaKqU"
+          alt="Cozinha profissional"
+          />
+          <div class="hero-overlay"></div>
         </div>
-        <div class="correction-header">
-          <h3 class="correction-title">Fator de Correção (FC)</h3>
-        </div>
-        <div class="correction-info">
-          <p>
-            O índice que determina a perda de massa durante a limpeza e <br />
-            preparo. É a relação entre o Peso Bruto e o Peso Líquido. Essencial <br />
-            para o cálculo de compras e precificação precisa.
+
+        <div class="hero-content">
+          <span class="hero-label">Matemática Culinária</span>
+          <h1 class="hero-title">
+            Precisão <br />
+            no Prato.
+          </h1>
+          <p class="hero-subtitle">
+            Transforme ingredientes brutos em sucesso <br />
+            culinário calculado com os padrões da <br />
+            indústria.
           </p>
         </div>
-        <div class="correction-formula">
-          <span>FC = PB / PL</span>
-        </div>
-      </div>
+      </section>
 
-      <!-- Fator de Cocção -->
-      <div class="coccion-factor-container">
-        <div class="coccion-header">
-          <h3 class="coccion-title">Fator de Cocção (FCy)</h3>
-          <p>
-            Avalia o rendimento final após o processo <br />
-            térmico. Crucial para definir o tamanho das <br />
-            porções servidas aos clientes.
-          </p>
-        </div>
-        <div class="coccion-impact">
-          <p>Impacto no custo</p>
-          <div class="coccion-bar">
-            <div class="coccion-bar-fill"></div>
-          </div>
-        </div>
-      </div>
+      <!-- Calculation Slate -->
+      <section class="calculation-section">
+        <div class="calculation-container">
+          <div class="calculation-panel">
+            <div class="calculation-header">
+              <h2 class="calculation-title">Painel de Cálculo</h2>
+              <div class="calculation-info">
+                <span class="icon"
+                  ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="15px"
+                  viewBox="0 -960 960 960"
+                  width="15px"
+                  fill="#ffb86b"
+                  >
+                  <path
+                    d="M508.5-291.5Q520-303 520-320t-11.5-28.5Q497-360 480-360t-28.5 11.5Q440-337 440-320t11.5 28.5Q463-280 480-280t28.5-11.5ZM440-440h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                    /></svg
+                  ></span>
+                  Entrada de Ficha Técnica
+                </div>
+              </div>
 
-      <!-- Registration Banner -->
-      <div class="registration-banner">
-        <div class="banner-bg"></div>
-        <div class="banner-content">
-          <h3 class="registration-title">Centralize seu conhecimento culinário.</h3>
-          <p>
-            Crie sua conta para salvar suas receitas e exportar fichas técnicas <br />
-            profissionais com um clique.
-          </p>
-        </div>
-        <div class="banner-action">
-          <button class="banner-button">Criar Conta Grátis</button>
-        </div>
-      </div>
-    </div>
-  </section>
+              <form class="calculation-form">
+                <div class="form-group">
+                  <label for="foodName">Nome do Alimento</label>
+                  <input
+                    id="foodName"
+                    type="text"
+                    placeholder="Ex: Filé Mignon"
+                    [(ngModel)]="foodName"
+                    name="foodName"
+                    />
+                  </div>
 
-  <!-- Signature Imagery -->
-  <section class="signature-imagery">
-    <div class="signature-card">
-      <img
-        class="signature-image"
-        data-alt="close-up of hands cleaning a large sea bass on a stainless steel kitchen counter with focused lighting"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkwjdOFeCn2YU9_0CyR_faUwPYdr3e4t02hWs27CXucqaHU9Z2yPxedH0F2zYDsBTR1xdqiyiKjYHgOH36L1rsiGyNN5l2J1GRk9m-cWdVbP9tKv-DN8tB4VfgTCZcCSHubf6s5xRcOOIS0OHwG4SS_fvA4fjCfXzUcChfFOKJpbpFpGBBu3vx0B2o09LPayo3ZNMe_lRcgqiRl7cwtuOc59T8Qp3tNKqncdnDXUeQRnI5yWlkoIT3wHQLshbSab-EdElKKWZ58VMs"
-      />
-      <div class="signature-overlay"></div>
-      <div class="signature-caption">
-        <p class="signature-text">Eficiência começa com dados.</p>
-      </div>
-    </div>
+                  <div class="form-group">
+                    <label for="foodWight">Peso do Alimento (kg)</label>
+                    <input
+                      id="foodWight"
+                      type="number"
+                      placeholder="Ex: 1.000"
+                      step="0.001"
+                      [(ngModel)]="foodWeight"
+                      name="foodWeight"
+                      />
+                    </div>
 
-    <div class="signature-card">
-      <img
-        class="signature-image"
-        data-alt="overhead shot of mise en place with organized vegetables and scales on a dark rustic table"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhns3cbDIxTlCv6e03-s7eqry5s5UWLeldL86UysGqRwxkWBaM4FTtJ5KjIdH7Qj3A_V-sc_COzDYOurGZtYhKhqdS_WtGb9pQOltkyPk7mOf9miaup61RSb17Z9b56Sb7Bc-bEnebKKJwCGyspJva7Udsoo8wM74moXHzvcVL_yQ1vQrqnUogSyZNobOhWkaNrGfizBWdSb8AValFcNf6O3tSPCPYl7O03mrBJLlYQhG8-IwsdI9QqDtFa2s0_FpQ89QAzOK4QVmq"
-      />
-      <div class="signature-overlay"></div>
-      <div class="signature-caption">
-        <p class="signature-text">A arte encontra a álgebra.</p>
-      </div>
-    </div>
-  </section>
-</main>
+                    <div class="form-group">
+                      <label for="inputTipo">Tipo de Peso</label>
+                      <select id="inputTipo" class="select-field" [(ngModel)]="typeWeight" name="typeWeight">
+                        <option value="bruto">Peso Bruto</option>
+                        <option value="liquido">Peso Líquido</option>
+                        <option value="cozido">Peso Cozido</option>
+                      </select>
+                    </div>
+                  </form>
+                  <div class="calculation-actions">
+                    <button type="button" class="button-calculate" (click)="onCalculate()">
+                      Calcular
+                      <span class="icon"
+                        ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#181210"
+                        >
+                        <path
+                          d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"
+                          /></svg
+                        ></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-<app-footer></app-footer>
+              <!-- Seção Conteúdo Educacional -->
+              <section class="education-section">
+                <div class="education-container">
+                  <!-- Fator de Correção -->
+                  <div class="correction-factor-container">
+                    <div class="correction-metrics">
+                      <span></span>
+                      <span> Metricas Essenciais </span>
+                    </div>
+                    <div class="correction-header">
+                      <h3 class="correction-title">Fator de Correção (FC)</h3>
+                    </div>
+                    <div class="correction-info">
+                      <p>
+                        O índice que determina a perda de massa durante a limpeza e <br />
+                        preparo. É a relação entre o Peso Bruto e o Peso Líquido. Essencial <br />
+                        para o cálculo de compras e precificação precisa.
+                      </p>
+                    </div>
+                    <div class="correction-formula">
+                      <span>FC = PB / PL</span>
+                    </div>
+                  </div>
 
-<app-calcular-dialog *ngIf="showDialog" [result]="calculationResult" (close)="closeDialog()">
-</app-calcular-dialog>
+                  <!-- Fator de Cocção -->
+                  <div class="coccion-factor-container">
+                    <div class="coccion-header">
+                      <h3 class="coccion-title">Fator de Cocção (FCy)</h3>
+                      <p>
+                        Avalia o rendimento final após o processo <br />
+                        térmico. Crucial para definir o tamanho das <br />
+                        porções servidas aos clientes.
+                      </p>
+                    </div>
+                    <div class="coccion-impact">
+                      <p>Impacto no custo</p>
+                      <div class="coccion-bar">
+                        <div class="coccion-bar-fill"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Registration Banner -->
+                  <div class="registration-banner">
+                    <div class="banner-bg"></div>
+                    <div class="banner-content">
+                      <h3 class="registration-title">Centralize seu conhecimento culinário.</h3>
+                      <p>
+                        Crie sua conta para salvar suas receitas e exportar fichas técnicas <br />
+                        profissionais com um clique.
+                      </p>
+                    </div>
+                    <div class="banner-action">
+                      <button class="banner-button">Criar Conta Grátis</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- Signature Imagery -->
+              <section class="signature-imagery">
+                <div class="signature-card">
+                  <img
+                    class="signature-image"
+                    data-alt="close-up of hands cleaning a large sea bass on a stainless steel kitchen counter with focused lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkwjdOFeCn2YU9_0CyR_faUwPYdr3e4t02hWs27CXucqaHU9Z2yPxedH0F2zYDsBTR1xdqiyiKjYHgOH36L1rsiGyNN5l2J1GRk9m-cWdVbP9tKv-DN8tB4VfgTCZcCSHubf6s5xRcOOIS0OHwG4SS_fvA4fjCfXzUcChfFOKJpbpFpGBBu3vx0B2o09LPayo3ZNMe_lRcgqiRl7cwtuOc59T8Qp3tNKqncdnDXUeQRnI5yWlkoIT3wHQLshbSab-EdElKKWZ58VMs"
+                    />
+                    <div class="signature-overlay"></div>
+                    <div class="signature-caption">
+                      <p class="signature-text">Eficiência começa com dados.</p>
+                    </div>
+                  </div>
+
+                  <div class="signature-card">
+                    <img
+                      class="signature-image"
+                      data-alt="overhead shot of mise en place with organized vegetables and scales on a dark rustic table"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhns3cbDIxTlCv6e03-s7eqry5s5UWLeldL86UysGqRwxkWBaM4FTtJ5KjIdH7Qj3A_V-sc_COzDYOurGZtYhKhqdS_WtGb9pQOltkyPk7mOf9miaup61RSb17Z9b56Sb7Bc-bEnebKKJwCGyspJva7Udsoo8wM74moXHzvcVL_yQ1vQrqnUogSyZNobOhWkaNrGfizBWdSb8AValFcNf6O3tSPCPYl7O03mrBJLlYQhG8-IwsdI9QqDtFa2s0_FpQ89QAzOK4QVmq"
+                      />
+                      <div class="signature-overlay"></div>
+                      <div class="signature-caption">
+                        <p class="signature-text">A arte encontra a álgebra.</p>
+                      </div>
+                    </div>
+                  </section>
+                </main>
+
+                <app-footer></app-footer>
+
+                @if (showDialog) {
+                  <app-calcular-dialog [result]="calculationResult" (close)="closeDialog()">
+                  </app-calcular-dialog>
+                }
