@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { CalculationService } from '../../core/services/calculation.service';
 import { CalculationRequest, CalculationResponse } from '../../shared/models/calculation.model';
 import { CalcularDialog } from '../../component/calcular-dialog/calcular-dialog';
+import { RouterLink } from "@angular/router";
+import { Footer } from '../../component/footer/footer';
 
 @Component({
   standalone: true,
   selector: 'app-main-screen',
-  imports: [CommonModule, FormsModule, CalcularDialog],
+  imports: [CommonModule, FormsModule, CalcularDialog, Footer, RouterLink],
   templateUrl: './main-screen.html',
   styleUrls: ['./main-screen.scss'],
 })

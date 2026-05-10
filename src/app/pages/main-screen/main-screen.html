@@ -2,13 +2,13 @@
   <nav class="navbar">
     <div class="logo">Gastro Factor</div>
     <div class="menu">
-      <a routerLink="/gastro-factor" class="active">Home</a>
+      <a routerLink="/grastrofactor" class="active">Home</a>
       <!-- TODO depois verificar como colocar os links das paginas -->
       <a href="">Minhas Receitas</a>
       <a href="">Sobre</a>
     </div>
     <div class="auth">
-      <a href="">Login</a>
+      <a routerLink="/login">Login</a>
       <img
         alt="Chef Profile"
         class="profile-image"
@@ -208,7 +208,7 @@
   </section>
 </main>
 
-
+<app-footer></app-footer>
 
 <app-calcular-dialog *ngIf="showDialog" [result]="calculationResult" (close)="closeDialog()">
 </app-calcular-dialog>
