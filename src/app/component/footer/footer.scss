@@ -9,10 +9,6 @@
   margin-top: 5rem;
   border-top: 1px solid rgba(28, 25, 23, 0.3);
 
-  @media (prefers-color-scheme: dark) {
-    background-color: #0c0a09;
-  }
-
   .footer-container {
     max-width: 80rem;
     margin: 0 auto;
@@ -39,7 +35,7 @@
         font-family: $font-body;
         font-size: 1.125rem;
         line-height: 1.75rem;
-        color: #d6d3d1;
+        color: $primary;
       }
 
       .footer-description {
@@ -48,7 +44,7 @@
         line-height: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
-        color: #78716c;
+        color: $outline;
         max-width: 24rem;
       }
     }
@@ -69,14 +65,14 @@
         line-height: 1rem;
         text-transform: uppercase;
         letter-spacing: 0.1em;
-        color: #78716c;
+        color: $outline;
         transition: color 0.2s ease-in-out;
-        text-decoration-color: rgba(251, 146, 60, 0.5);
+        text-decoration-color: rgba($primary, 0.5);
         text-underline-offset: 4px;
         text-decoration-line: underline;
 
         &:hover {
-          color: #d6d3d1;
+          color: $primary;
         }
 
         svg {
